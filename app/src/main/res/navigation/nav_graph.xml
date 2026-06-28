@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mealDeciderFragment">
+
+    <fragment
+        android:id="@+id/mealDeciderFragment"
+        android:name="com.lin.ninisoul.MealDeciderFragment"
+        android:label="Meal Decider"
+        tools:layout="@layout/fragment_meal_decider" />
+
+    <fragment
+        android:id="@+id/fridgeCookFragment"
+        android:name="com.lin.ninisoul.FridgeCookFragment"
+        android:label="Fridge Cook"
+        tools:layout="@layout/fragment_fridge_cook" />
+
+    <fragment
+        android:id="@+id/recipeLibraryFragment"
+        android:name="com.lin.ninisoul.RecipeLibraryFragment"
+        android:label="Recipe Library"
+        tools:layout="@layout/fragment_recipe_library">
+
+        <!-- Connects Recipe Library to Add Recipe screen -->
+        <action
+            android:id="@+id/action_recipeLibrary_to_addRecipe"
+            app:destination="@id/addRecipeFragment" />
+
+        <!-- Connects Recipe Library to Recipe Detail screen -->
+        <action
+            android:id="@+id/action_recipeLibrary_to_recipeDetail"
+            app:destination="@id/recipeDetailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addRecipeFragment"
+        android:name="com.lin.ninisoul.AddRecipeFragment"
+        android:label="Add Recipe"
+        tools:layout="@layout/fragment_add_recipe" />
+
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.lin.ninisoul.RecipeDetailFragment"
+        android:label="Recipe Detail"
+        tools:layout="@layout/fragment_recipe_detail" />
+
+    <!-- NEW HISTORY SCREEN REGISTERED HERE -->
+    <fragment
+        android:id="@+id/cookingHistoryFragment"
+        android:name="com.lin.ninisoul.CookingHistoryFragment"
+        android:label="Cooking History"
+        tools:layout="@layout/fragment_cooking_history" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.lin.ninisoul.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

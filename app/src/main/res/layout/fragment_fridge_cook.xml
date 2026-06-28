@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ninisoul_background"
+    tools:context=".FridgeCookFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Clean, consistent brand header band up top -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/ninisoul_green"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NiniSoul"
+                android:textColor="@color/ninisoul_green_light"
+                android:textSize="13sp"
+                android:alpha="0.85" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="What's in Your Fridge?"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Type what you have, we'll find a meal"
+                android:textColor="@color/ninisoul_green_light"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- Main interactive input section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Rounded card holding the text area input field -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <EditText
+                        android:id="@+id/et_ingredients"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minLines="3"
+                        android:gravity="top"
+                        android:hint="e.g. tomatoes, onions, sukuma wiki, eggs"
+                        android:textColor="@color/ninisoul_text_dark"
+                        android:textColorHint="@color/ninisoul_text_gray"
+                        android:textSize="16sp"
+                        android:background="@android:color/transparent"
+                        android:inputType="textMultiLine" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- KITCHEN INSPIRATION ROW: Helps fill up empty space beautifully -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="4dp"
+                android:text="Popular tags: Potatoes, Nduma, Yams, Beef, Eggs"
+                android:textColor="@color/ninisoul_text_gray"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <!-- Find Recipes button locked to your exact #E65F2B brand orange -->
+            <Button
+                android:id="@+id/btn_find_recipes"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:text="Find Recipes"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:backgroundTint="#E65F2B" />
+
+            <!-- Dynamic pill badge that pops up to show matches found -->
+            <TextView
+                android:id="@+id/tv_match_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/badge_pill_background"
+                android:textColor="@color/ninisoul_green"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="6dp"
+                android:visibility="gone"
+                tools:text="3 Matching Meals Found"
+                tools:visibility="visible" />
+
+            <!-- RESULTS LIST CONTAINER AREA -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="4dp"
+                android:text="Discovered Options"
+                android:textColor="@color/ninisoul_green"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+
+                <!-- Replaced the plain box with an explicit fallback greeting instruction -->
+                <TextView
+                    android:id="@+id/tv_results"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp"
+                    android:text="Enter your ingredients above and click search to view tailored meal options."
+                    android:textColor="@color/ninisoul_text_gray"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="6dp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

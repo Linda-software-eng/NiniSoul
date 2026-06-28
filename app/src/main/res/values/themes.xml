@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--    Base application theme. -->
+    <style name="Base.Theme.NiniSoul" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/ninisoul_orange</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/ninisoul_green</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Screen background -->
+        <item name="android:colorBackground">@color/ninisoul_background</item>
+
+        <!-- Status bar color (top of phone where time/battery shows) -->
+        <item name="android:statusBarColor">@color/ninisoul_green</item>
+    </style>
+
+    <style name="Theme.NiniSoul" parent="Base.Theme.NiniSoul" />
+
+    <style name="NiniSoulActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/ninisoul_green_light</item>
+    </style>
+
+    <!-- NINISOUL CUSTOM STYLE: This creates a unique shape for our header.
+         It keeps the top sharp (0dp) but rounds the bottom left and right corners smoothly (28dp). -->
+    <style name="ShapeAppearance.HeaderBottomCorners" parent="">
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomLeft">28dp</item>
+        <item name="cornerSizeBottomRight">28dp</item>
+    </style>
+</resources>

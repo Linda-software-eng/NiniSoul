@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- NiniSoul Brand Colors -->
+    <color name="ninisoul_orange">#E65F2B</color>
+    <color name="ninisoul_orange_light">#FBE9E7</color>
+    <color name="ninisoul_green">#085041</color>
+    <color name="ninisoul_green_light">#E8F5E9</color>
+    <color name="ninisoul_background">#FAFAFA</color>
+    <color name="ninisoul_text_dark">#1B1B1B</color>
+    <color name="ninisoul_text_gray">#666666</color>
+</resources>

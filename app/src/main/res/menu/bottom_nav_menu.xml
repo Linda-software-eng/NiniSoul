@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mealDeciderFragment"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Meal Decider" />
+
+    <item
+        android:id="@+id/fridgeCookFragment"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Fridge Cook" />
+
+    <item
+        android:id="@+id/recipeLibraryFragment"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="My Cookbook" />
+
+    <item
+        android:id="@+id/cookingHistoryFragment"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="History" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Profile" />
+
+</menu>
